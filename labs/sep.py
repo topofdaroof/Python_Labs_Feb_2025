@@ -6,7 +6,7 @@ Belgium = 'Belgium,10445852,Brussels,737966,Europe,1830,Euro,Catholicism,Dutch,F
 print("-" * len(Belgium))
 print(Belgium.replace(",", ":"))
 
-pop_country = int(Belgium[8:16])
+pop_country = int(Belgium[8:16]) # Remember to CONVERT str into int!
 pop_capital = int(Belgium[26:32])
 
 print(f"Population of Country and capital = {pop_country + pop_capital}")
