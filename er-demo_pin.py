@@ -16,6 +16,8 @@ while pin != master_pin and attempts < 3:
     pin = input("Enter Pin: ")
     if pin == master_pin:
         print("Valid Pin")
+        continue
+        break
     else:
         print("Invalid Pin")
         attempts += 1
