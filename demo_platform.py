@@ -10,7 +10,7 @@ import sys
 import os
 
 if sys.platform == "win32":
-    home_dir = os.environ["HOMEPATH"]
+    home_dir = os.environ["HOMEPATH"] # Pick
 else:
     home_dir = os.environ["HOME"]
 
