@@ -10,4 +10,3 @@ films = ['hust and flow', 'B film' , 'lord of the rings' , 'c movie' , 'd film' 
 for kubricks in films:
     print(kubricks.upper (), end = "\n")
 
-idx = 0
