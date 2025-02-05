@@ -15,6 +15,6 @@ for line in fh_in:
     m = re.search(r"^([A-Z]).*\1$", line)
     # m = re.search("[aeiou][aeio]", line)
     # m = re.search("[.]", line)
-    # m=re.search("^(.)(.).\2\1$", line)
+    ## m=re.search("^(.)(.).\2\1$", line)
     if m:
         print(line, end="")
