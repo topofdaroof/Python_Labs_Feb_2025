@@ -23,3 +23,4 @@ while pin != master_pin and attempts < 3:
         attempts += 1
 
 print("done")
+print(leave)
