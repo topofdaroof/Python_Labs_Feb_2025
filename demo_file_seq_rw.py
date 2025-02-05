@@ -5,6 +5,7 @@
 """
     Docstring:
 """
+import sys
 
 movies = { 'william': ['fury', 'pulp fiction', 'shawshank redemption'],
            'kirill': ['pulp fiction', 'the departed', 'snatch'],
@@ -13,12 +14,13 @@ movies = { 'william': ['fury', 'pulp fiction', 'shawshank redemption'],
 }
 
 # Open a file handle for WRITING in TEXT mode
-fh_out = open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="wt")
+fh_out = open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="at")
 
 # ITERATE through dict and WRITE key+values to file handle.
 for name in movies.keys():
-    print(f"{name} {movies[name]}", end="\n")
-    fh_out.write(f"{name} {movies[name]}\n")
+    print(f"{name} {movies[name]}", end="\n", file=sys.stdout)
+    print(f"{name} {movies[name]}", end="\n", file=fh_out)
+    # fh_out.write(f"{name} {movies[name]}\n")
 
 # fh_out.flush() # Manually flush buffers
 fh_out.close() # Flush buffers and close file handle
