@@ -30,7 +30,8 @@ for line in fh_in:
     # m = re.search(r"^[A-Z].{4}[A-Z]$", line)  # Match lines of 6 chars start/end with a CAPITAL
     # m = re.match(r"^[A-Z].{4}[A-Z]$", line)  # AUTO MATCHES LINES STARTING WITH...
     # m = re.fullmatch(r"^[A-Z].{4}[A-Z]\n$", line)  # Match ENTIRE LINE incl HIDDEN chars!
-    # m = re.search(r"^(.)(.).\2\1$", line)  # Match lines 5 char palindromes
-    m = re.search(r"^([A-Z]).*\1$", line)  # Match lines start/end with SAME CAPITAL!
+    m = re.search(r"^(.)(.).\2\1$", line)  # Match lines 5 char palindromes
+    # m = re.search(r"^([A-Z]).*\1$", line, flags=re.IGNORECASE)  # Match lines start/end with SAME CAPITAL!
     if m:
-        print(line, end="")
+        print(f"Matched {m.group()} on {line.rstrip()} at {m.start()} - {m.end()}, "
+              f"Groupings = {m.groups()}, Group 1 = {m.group(1)}")
