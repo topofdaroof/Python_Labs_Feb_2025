@@ -16,15 +16,20 @@ def power (x, z):
     """ Return POWER of x to z """
     return x**z
 
-def sqrt (x, z):
+def sqrt (x):
     """ Return sqrt x """
     return round(x**0.5, 2)
 
-print("ADVANCED Clac App")
-print("-"*30)
 
-print(f"100 % 30 = {mod(100, 30)}")
-print(f"100 ** 3= {power(100,3)}")
-print(f"100 ** 3= {sqrt(100,3)}")
+def main():
+    print("ADVANCED Clac App")
+    print("-"*30)
 
+    print(f"100 % 30 = {mod(100, 30)}")
+    print(f"100 ** 3= {power(100,3)}")
+    print(f"100 ** 3= {sqrt(100)}")
 
+if __name__ == "__main__":
+    #executes only when run directly as a program
+    main()
+    sys.exit(0)
