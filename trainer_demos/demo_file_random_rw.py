@@ -16,7 +16,7 @@ CUR = 1 # Current file position
 EOF = 2 # End of File
 
 # Open a file handle for READING in TEXT mode
-with open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="rt") as fh_in:
+with open(r"/movies.txt", mode="rt") as fh_in:
     fh_in.seek(90, SOF) # Seek forwards 90 chars from SOF.
     text = fh_in.read(30)
     print(f"Text at {fh_in.tell() - len(text)} = {text}")
@@ -26,7 +26,7 @@ with open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="rt") a
     print(f"Text at {fh_in.tell() - len(text)} = {text}")
 
 # Open a file handle for READING in BINARY mode
-with open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="rb") as fh_in:
+with open(r"/movies.txt", mode="rb") as fh_in:
     fh_in.seek(-90, EOF) # Seek backwards 90 bytes from EOF.
     text = fh_in.read(30)
     print(f"Bytes at {fh_in.tell() - len(text)} = {text}")

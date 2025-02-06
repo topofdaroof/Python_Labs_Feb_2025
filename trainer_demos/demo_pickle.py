@@ -16,7 +16,7 @@ movies = { 'william': ['fury', 'pulp fiction', 'shawshank redemption'],
 
 # Open a file handle for WRITING in BINARY mode
 # with open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.p", mode="wb") as fh_out:
-with gzip.open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.pgz", mode="wb") as fh_out:
+with gzip.open(r"/movies.pgz", mode="wb") as fh_out:
     # pickle.dump(movies, fh_out, protocol=5) # Pickle Protocol (0=ASCII, 1-5=Binary)
     # pickle.dump(movies, fh_out, pickle.DEFAULT_PROTOCOL) # Default 5
     pickle.dump(movies, fh_out, pickle.HIGHEST_PROTOCOL) # Highest 5
@@ -24,7 +24,7 @@ with gzip.open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.pgz", mode="w
 
 # Open a file handle for READING in BINARY mode
 # with open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.p", mode="rb") as fh_in:
-with gzip.open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.pgz", mode="rb") as fh_in:
+with gzip.open(r"/movies.pgz", mode="rb") as fh_in:
     films = pickle.load(fh_in)
 
 pprint.pprint(movies)

@@ -14,7 +14,7 @@ movies = { 'william': ['fury', 'pulp fiction', 'shawshank redemption'],
 }
 
 # Open a file handle for WRITING in TEXT mode
-fh_out = open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="at")
+fh_out = open(r"/movies.txt", mode="at")
 
 # ITERATE through dict and WRITE key+values to file handle.
 for name in movies.keys():
@@ -28,7 +28,7 @@ fh_out.close() # Flush buffers and close file handle
 print("-" * 60)
 
 # Open a file handle for READING in TEXT mode
-fh_in = open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="rt")
+fh_in = open(r"/movies.txt", mode="rt")
 
 # text = fh_in.read() # Read ENTIRE file into str object. Be careful of HUGE files.
 # text = fh_in.read(30) # Read NEXT 30 chars into str.

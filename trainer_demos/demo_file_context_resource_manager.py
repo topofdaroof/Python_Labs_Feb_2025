@@ -13,7 +13,7 @@ movies = { 'william': ['fury', 'pulp fiction', 'shawshank redemption'],
 }
 
 # Open a file handle for WRITING in TEXT mode
-with open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="wt") as fh_out:
+with open(r"/movies.txt", mode="wt") as fh_out:
     for name in movies.keys():
         print(f"{name} {movies[name]}", end="\n")
         fh_out.write(f"{name} {movies[name]}\n")
@@ -22,7 +22,7 @@ with open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="wt") a
 print("-" * 60)
 
 # Open a file handle for READING in TEXT mode
-with open(r"c:\users\donal\course\Python_Labs_Feb_2025\movies.txt", mode="rt") as fh_in:
+with open(r"/movies.txt", mode="rt") as fh_in:
     for line in fh_in:
         print(line, end="")
 
