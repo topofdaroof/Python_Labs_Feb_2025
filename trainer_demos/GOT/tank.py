@@ -4,11 +4,12 @@
 """
     Tank class for - Game of Tanks
 """
+import vehicle
 
-class Tank:
+class Tank(vehicle.Vehicle, , , , , ):
     # Attributes/Data + Behaviour/Methods
     def __init__(self, country, model):
-
+        super().__init__(country, model)
         self._location = {'x':0, 'y':0, 'z':0}
         self._direction = 0
         self._shells = 20
