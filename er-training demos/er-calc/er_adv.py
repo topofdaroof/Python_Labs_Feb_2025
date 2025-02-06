@@ -27,4 +27,4 @@ print(f"100 % 30 = {mod(100, 30)}")
 print(f"100 ** 3= {power(100,3)}")
 print(f"100 ** 3= {sqrt(100,3)}")
 
-sys.exit(0)
+
