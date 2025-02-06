@@ -6,6 +6,7 @@
 """
 import re
 
+
 # Open File Handle for READING in TEXT mode
 fh_in = open(r"c:\labs\words", mode="rt")
 
